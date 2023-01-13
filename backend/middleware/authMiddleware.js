@@ -20,7 +20,7 @@ const protect = asyncHandler(async (req,res,next)=>{
 
             if(!req.user)
             {
-                console.log('Not authorized');
+                res.status(401)
                 throw new Error('Not authorized')
             }
 
@@ -35,12 +35,9 @@ const protect = asyncHandler(async (req,res,next)=>{
 
     if(!token)
     {
-        console.log(error);
         res.status(401)
         throw new Error('Not authorized')
     }
-
-    res.status(200).json('Geldim ayeee')
 
 })
 
