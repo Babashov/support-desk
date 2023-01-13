@@ -36,7 +36,7 @@ function Register() {
 
     dispatch(reset())
 
-  },[user,isSuccess,message,dispatch,navigate])
+  },[user,isSuccess,message,isError,dispatch,navigate])
 
 
   const onChange = (e)=>{
