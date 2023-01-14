@@ -82,7 +82,7 @@ export const ticketSlice = createSlice({
             })
 
             .addCase(getTickets.fulfilled,(state,action)=>{
-                state.isLoading = false
+                state.isLoading = false,
                 state.isSuccess = true,
                 state.tickets = action.payload
             })
